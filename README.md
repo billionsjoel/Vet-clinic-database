@@ -3,6 +3,9 @@
 > This repo involves the schema, queries and data used during the microverse psql learning track.
 
 
+# SCREENSHOT PAGE
+![screenshot](./appscreenshot.png)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.

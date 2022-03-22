@@ -20,4 +20,6 @@ update animals set species='digimon' where name like '%mon';
 select * from animals;
 update animals set species='pokemon' where species='';
 select * from animals;
+commit;
+
 

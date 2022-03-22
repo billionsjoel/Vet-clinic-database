@@ -8,3 +8,46 @@ SELECT name,escape_attempts FROM animals WHERE weight_kg > 10.5;
 select * from animals where neutered=true;
 select * from animals where name != 'Gabumon';
 select * from animals where weight_kg >= 10.4 AND weight_kg <=17.3;
+
+begin transaction;
+ALTER TABLE animals RENAME COLUMN species TO unspecified;
+select * from animals;
+rollback;
+select * from animals;
+end transaction;
+
+
+begin transaction;
+update animals set species='digimon' where name like '%mon';
+select * from animals;
+update animals set species='pokemon' where species='';
+select * from animals;
+commit;
+end transaction;
+
+
+begin transaction;
+delete from animals;
+select * from animals;
+rollback;
+select * from animals;
+end transaction;
+
+begin;
+delete from animals where date_of_birth >= '2022-01-01';
+select * from animals;
+savepoint sp1;
+update animals set weight_kg = weight_kg * -1;
+rollback to sp1;
+update animals set weight_kg = weight_kg * -1 where weight_kg < 0;
+commit;
+end;
+
+select count(*) DISTINCT from animals;
+select count(*) from animals where escape_attempts =0;
+select avg(weight_kg) from animals;
+select name from animals where escape_attempts = (select max(escape_attempts) from animals);
+select min(weight_kg), max(weight_kg) from animals;
+select avg(escape_attempts) from animals where date_of_birth >= '1990-01-01' and date_of_birth <= '2000-01-01';
+
+

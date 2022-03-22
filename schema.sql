@@ -30,3 +30,4 @@ create table species(
 alter table animals drop column species;
 ALTER TABLE animals ADD species_id SMALLINT NOT NULL;
 ALTER TABLE animals ADD CONSTRAINT fkey_species_id FOREIGN KEY (species_id) REFERENCES species(id);
+ALTER TABLE animals ADD CONSTRAINT fkey_owner_id FOREIGN KEY (owner_id) REFERENCES owners(id);

@@ -22,4 +22,10 @@ update animals set species='pokemon' where species='';
 select * from animals;
 commit;
 
+begin transaction;
+delete from animals;
+select * from animals;
+rollback;
+select * from animals;
+
 

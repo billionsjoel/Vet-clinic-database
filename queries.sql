@@ -14,6 +14,8 @@ ALTER TABLE animals RENAME COLUMN species TO unspecified;
 select * from animals;
 rollback;
 select * from animals;
+end transaction;
+
 
 begin transaction;
 update animals set species='digimon' where name like '%mon';
@@ -21,11 +23,19 @@ select * from animals;
 update animals set species='pokemon' where species='';
 select * from animals;
 commit;
+end transaction;
+
 
 begin transaction;
 delete from animals;
 select * from animals;
 rollback;
 select * from animals;
+end transaction;
+
+begin;
+delete from animals where date_of_birth >= '2022-01-01';
+select * from animals;
+end;
 
 

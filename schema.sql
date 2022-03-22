@@ -22,3 +22,8 @@ create table owners(
   age INT NOT NULL
 );
 
+create table species(
+id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+name VARCHAR(255) NOT NULL
+);
+

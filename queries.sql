@@ -48,5 +48,6 @@ select count(*) from animals where escape_attempts =0;
 select avg(weight_kg) from animals;
 select name from animals where escape_attempts = (select max(escape_attempts) from animals);
 select min(weight_kg), max(weight_kg) from animals;
+select avg(escape_attempts) from animals where date_of_birth >= '1990-01-01' and date_of_birth <= '2000-01-01';
 
 

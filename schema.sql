@@ -23,7 +23,8 @@ create table owners(
 );
 
 create table species(
-id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-name VARCHAR(255) NOT NULL
+ id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ name VARCHAR(255) NOT NULL
 );
 
+alter table animals drop column species;

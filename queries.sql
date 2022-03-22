@@ -15,3 +15,9 @@ select * from animals;
 rollback;
 select * from animals;
 
+begin transaction;
+update animals set species='digimon' where name like '%mon';
+select * from animals;
+update animals set species='pokemon' where species='';
+select * from animals;
+

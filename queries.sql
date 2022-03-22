@@ -43,4 +43,6 @@ update animals set weight_kg = weight_kg * -1 where weight_kg < 0;
 commit;
 end;
 
+select count(*) DISTINCT from animals;
+
 

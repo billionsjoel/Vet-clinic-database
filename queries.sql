@@ -37,6 +37,7 @@ begin;
 delete from animals where date_of_birth >= '2022-01-01';
 select * from animals;
 savepoint sp1;
+update animals set weight_kg = weight_kg * -1;
 end;
 
 

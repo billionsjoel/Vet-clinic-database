@@ -44,5 +44,6 @@ commit;
 end;
 
 select count(*) DISTINCT from animals;
+select count(*) from animals where escape_attempts =0;
 
 

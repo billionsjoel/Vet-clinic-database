@@ -40,3 +40,4 @@ insert into owners(full_name, age) values('sam smith', 34),
 insert into species(name) values('pokemon'),('Digimon');
 update animals set species_id = (select id from species where name='Digimon') where name like '%mon';
 update animals set owner_id = (select id from owners where full_name='sam smith') where name ='Agumon';
+update animals set owner_id = (select id from owners where full_name='Jennifer Orwell') where name ='Gabumon' or name='Pikachu';

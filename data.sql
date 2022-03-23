@@ -41,3 +41,6 @@ insert into species(name) values('pokemon'),('Digimon');
 update animals set species_id = (select id from species where name='Digimon') where name like '%mon';
 update animals set owner_id = (select id from owners where full_name='sam smith') where name ='Agumon';
 update animals set owner_id = (select id from owners where full_name='Jennifer Orwell') where name ='Gabumon' or name='Pikachu';
+update animals set owner_id = (select id from owners where full_name='Bob') where name ='Devimon' or name='Plantmon';
+update animals set owner_id = (select id from owners where full_name='Melody Pond') where name ='Charmander' or name='Squirtle' or name='Blossom';
+update animals set owner_id = (select id from owners where full_name='Dean Winchester') where name ='Angemon' or name='Boarmon';

@@ -44,10 +44,3 @@ update animals set owner_id = (select id from owners where full_name='Jennifer O
 update animals set owner_id = (select id from owners where full_name='Bob') where name ='Devimon' or name='Plantmon';
 update animals set owner_id = (select id from owners where full_name='Melody Pond') where name ='Charmander' or name='Squirtle' or name='Blossom';
 update animals set owner_id = (select id from owners where full_name='Dean Winchester') where name ='Angemon' or name='Boarmon';
-
-select * from animals inner join owners on animals.owner_id = owners.id where full_name='Melody Pond';
-select * from animals inner join species on animals.species_id = species.id where species.name='pokemon';
-select owners.full_name,animals.name from animals inner join owners on animals.owner_id =owners.id order by owners.full_name;
-select species.name, count(*) from animals inner join species on animals.species_id = species.id group by species.name;
-select * from animals join species on animals.species_id = species.id join owners on animals.owner_id = owners.id where full_name = 'Jennifer Orwell' and species.name = 'Digimon';
-select * from animals join species on animals.species_id = species.id join owners on animals.owner_id = owners.id where full_name = 'Dean Winchester' and escape_attempts <= 0;

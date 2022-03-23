@@ -47,3 +47,4 @@ update animals set owner_id = (select id from owners where full_name='Dean Winch
 
 select * from animals inner join owners on animals.owner_id = owners.id where full_name='Melody Pond';
 select * from animals inner join species on animals.species_id = species.id where species.name='pokemon';
+select species.name, count(*) from animals inner join species on animals.species_id = species.id group by species.name;

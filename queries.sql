@@ -50,4 +50,7 @@ select name from animals where escape_attempts = (select max(escape_attempts) fr
 select min(weight_kg), max(weight_kg) from animals;
 select avg(escape_attempts) from animals where date_of_birth >= '1990-01-01' and date_of_birth <= '2000-01-01';
 
+SELECT owners.id, COUNT(*) AS owner_count FROM owners JOIN animals ON owners.id = animals.owner_id;
+SELECT owners.full_name, COUNT(full_name) AS owner_count FROM owners JOIN animals ON owners.id = animals.owner_id group by 1 order by owner_count desc LIMIT 1;
+
 

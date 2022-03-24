@@ -31,3 +31,18 @@ alter table animals drop column species;
 ALTER TABLE animals ADD species_id SMALLINT NOT NULL;
 ALTER TABLE animals ADD CONSTRAINT fkey_species_id FOREIGN KEY (species_id) REFERENCES species(id);
 ALTER TABLE animals ADD CONSTRAINT fkey_owner_id FOREIGN KEY (owner_id) REFERENCES owners(id);
+
+create table vets(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  age INT NOT NULL,
+  date_of_graduation DATE NOT NULL
+);
+
+CREATE TABLE species_vets (
+  species_id INT,
+  vets_id INT,
+  CONSTRAINT species_vet_pk PRIMARY KEY (species_id, vets_id),
+  CONSTRAINT FK_species FOREIGN KEY (species_id) REFERENCES species (id),
+  CONSTRAINT FK_vets FOREIGN KEY (vets_id) REFERENCES vets (id)
+);

@@ -65,3 +65,4 @@ select species.name, count(*) from animals inner join species on animals.species
 select * from animals join species on animals.species_id = species.id join owners on animals.owner_id = owners.id where full_name = 'Jennifer Orwell' and species.name = 'Digimon';
 select * from animals join species on animals.species_id = species.id join owners on animals.owner_id = owners.id where full_name = 'Dean Winchester' and escape_attempts <= 0;
 
+select animals.name from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id where vets.name='William Tatcher' order by date_of_visits desc LIMIT 1;

@@ -52,3 +52,6 @@ values('Stephanie Mendez', 64, '1981-05-04'),
 values('Jack Harkness ', 38, '2008-06-08');
 
 insert into specializations(species_id, vets_id) values((select id from species where name='pokemon'), (select id from vets where name='William Tatcher'));
+insert into specializations(species_id, vets_id) values((select id from species where name='Digimon'), (select id from vets where name='Stephanie Mendez'));
+insert into specializations(species_id, vets_id) values((select id from species where name='pokemon'), (select id from vets where name='Stephanie Mendez'));
+insert into specializations(species_id, vets_id) values((select id from species where name='Digimon'), (select id from vets where name='Jack Harkness'));

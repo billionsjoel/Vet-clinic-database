@@ -72,5 +72,7 @@ select animals.name from animals join visits on animals.id = visits.animals_id j
 select animals.name, count(animals_id) as visit_count from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id group by 1 order by visit_count desc limit 1;
 select animals.name from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id where vets.name = 'Maisy Smith' order by date_of_visits asc limit 1;
 select * from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id order by date_of_visits desc;
+select count(visits.*) from vets join visits on visits.vets_id = vets.id where vets.id NOT IN (select vets_id from specializations);
+select species.name from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id where vets.name = 'Maisy Smith' group by species.name order by count(species.name) desc limit 1;
 
 

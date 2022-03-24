@@ -50,6 +50,7 @@ CREATE TABLE specializations (
 CREATE TABLE visits (
   animals_id INT,
   vets_id INT,
+  date_of_visits DATE NOT NULL,
   CONSTRAINT animals_vet_pk PRIMARY KEY (animals_id, vets_id),
   CONSTRAINT FK_visits_animals FOREIGN KEY (animals_id) REFERENCES animals (id),
   CONSTRAINT FK_visits_vets FOREIGN KEY (vets_id) REFERENCES vets (id)

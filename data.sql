@@ -55,3 +55,5 @@ insert into specializations(species_id, vets_id) values((select id from species 
 insert into specializations(species_id, vets_id) values((select id from species where name='Digimon'), (select id from vets where name='Stephanie Mendez'));
 insert into specializations(species_id, vets_id) values((select id from species where name='pokemon'), (select id from vets where name='Stephanie Mendez'));
 insert into specializations(species_id, vets_id) values((select id from species where name='Digimon'), (select id from vets where name='Jack Harkness'));
+
+insert into visits(species_id, vets_id) values((select id from species where name='pokemon'), (select id from vets where name='William Tatcher'));

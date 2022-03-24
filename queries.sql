@@ -71,4 +71,6 @@ select vets.name, species.name from animals join visits on animals.id = visits.a
 select animals.name from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id where vets.name='Stephanie Mendez' and date_of_visits between '2020-04-01' and '2020-08-30';
 select animals.name, count(animals_id) as visit_count from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id group by 1 order by visit_count desc limit 1;
 select animals.name from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id where vets.name = 'Maisy Smith' order by date_of_visits asc limit 1;
+select * from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id order by date_of_visits desc;
+
 

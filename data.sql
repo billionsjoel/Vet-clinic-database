@@ -56,4 +56,19 @@ insert into specializations(species_id, vets_id) values((select id from species 
 insert into specializations(species_id, vets_id) values((select id from species where name='pokemon'), (select id from vets where name='Stephanie Mendez'));
 insert into specializations(species_id, vets_id) values((select id from species where name='Digimon'), (select id from vets where name='Jack Harkness'));
 
-insert into visits(species_id, vets_id) values((select id from species where name='pokemon'), (select id from vets where name='William Tatcher'));
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Agumon'), (select id from vets where name='William Tatcher'), '2020-06-24');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Agumon'), (select id from vets where name='Stephanie Mendez'), '2020-07-22');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Gabumon'), (select id from vets where name='Jack Harkness '), '2021-02-02');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Pikachu'), (select id from vets where name='Maisy Smith'), '2020-01-05');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Pikachu'), (select id from vets where name='Maisy Smith'), '2020-05-14');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Devimon'), (select id from vets where name='Stephanie Mendez'), '2021-05-04');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Charmander'), (select id from vets where name='Jack Harkness '), '2021-02-24');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Plantmon'), (select id from vets where name='Maisy Smith'), '2019-12-21');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Plantmon'), (select id from vets where name='William Tatcher'), '2020-08-10');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Plantmon'), (select id from vets where name='Maisy Smith'), '2021-04-07');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Squirtle'), (select id from vets where name='Stephanie Mendez'), '2019-09-29');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Angemon'), (select id from vets where name='Jack Harkness '), '2020-11-04');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Boarmon'), (select id from vets where name='Maisy Smith'), '2019-05-15');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Boarmon'), (select id from vets where name='Maisy Smith'), '2020-03-08');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Blossom'), (select id from vets where name='Stephanie Mendez'), '2020-05-24');
+insert into visits(animals_id, vets_id, date_of_visits) values((select id from animals where name='Blossom'), (select id from vets where name='William Tatcher'), '2021-01-11');

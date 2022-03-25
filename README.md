@@ -1,6 +1,6 @@
 # Vet Clinic Database
 
-> This repo involves the schema, queries and data used during the microverse psql learning track.
+> This repo involves the schema, queries and data used during the microverse psql learning track.. Most of the query structures you will ever need building a project. From creating tables to joining and querying them.
 
 
 # SCREENSHOT PAGE

@@ -62,10 +62,3 @@ CREATE INDEX visits_animals_asc ON visits(animal_id ASC);
 CREATE INDEX visits_vets_asc ON visits(vets_id ASC);
 CREATE INDEX owners_email_asc ON owners(email ASC);
 
-SELECT COUNT(*) FROM visits where animals_id = 6;
-SELECT * FROM visits where vets_id = 12;
-SELECT * FROM owners where email = 'owner_18327@mail.com';
-
-EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 6;
-EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 12;
-EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';

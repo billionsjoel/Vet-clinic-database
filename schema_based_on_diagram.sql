@@ -6,7 +6,11 @@ CREATE TABLE medical_histories(
   status VARCHAR(50) NOT NULL
 );
 
-
+CREATE TABLE treatment(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  type VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL
+);
 
 
 

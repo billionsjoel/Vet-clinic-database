@@ -62,3 +62,4 @@ CREATE INDEX visits_animals_asc ON visits(animal_id ASC);
 CREATE INDEX visits_vets_asc ON visits(vets_id ASC);
 CREATE INDEX owners_email_asc ON owners(email ASC);
 
+ALTER TABLE medical_histories ADD CONSTRAINT fkey_patient_id FOREIGN KEY (patient_id) REFERENCES patients(id);

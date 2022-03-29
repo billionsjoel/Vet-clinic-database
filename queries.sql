@@ -76,3 +76,10 @@ select count(visits.*) from vets join visits on visits.vets_id = vets.id where v
 select species.name from animals join visits on animals.id = visits.animals_id join vets on visits.vets_id = vets.id join species on animals.species_id = species.id where vets.name = 'Maisy Smith' group by species.name order by count(species.name) desc limit 1;
 
 
+SELECT COUNT(*) FROM visits where animals_id = 6;
+SELECT * FROM visits where vets_id = 12;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 6;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 12;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';

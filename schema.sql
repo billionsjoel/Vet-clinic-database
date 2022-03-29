@@ -55,3 +55,16 @@ CREATE TABLE visits (
   CONSTRAINT FK_visits_animals FOREIGN KEY (animals_id) REFERENCES animals (id),
   CONSTRAINT FK_visits_vets FOREIGN KEY (vets_id) REFERENCES vets (id)
 );
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX visits_animals_asc ON visits(animal_id ASC);
+CREATE INDEX visits_vets_asc ON visits(vets_id ASC);
+CREATE INDEX owners_email_asc ON owners(email ASC);
+
+
+ALTER TABLE medical_histories ADD CONSTRAINT fkey_patient_id FOREIGN KEY (patient_id) REFERENCES patients(id);
+ALTER TABLE invoices ADD CONSTRAINT fkey_patient_id FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id);
+ALTER TABLE invoice_items ADD CONSTRAINT fkey_patient_id FOREIGN KEY (invoice_id) REFERENCES invoices(id);
+ALTER TABLE invoice_items ADD CONSTRAINT fkey_invtreat_id FOREIGN KEY (treatment_id) REFERENCES treatments(id);
+ALTER TABLE treatments ADD CONSTRAINT fkey_treatmed_id FOREIGN KEY (id) REFERENCES medical_histories(id);

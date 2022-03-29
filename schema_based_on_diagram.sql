@@ -21,7 +21,15 @@ CREATE TABLE invoice_items(
   treatment_id INT NOT NULL
 );
 
-
+CREATE TABLE invoices(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  total_amount DECIMAL NOT NULL,
+  generated_at timestamp without time zone NOT NULL
+   DEFAULT (current_timestamp AT TIME ZONE 'UTC'),
+  payed_at timestamp without time zone NOT NULL
+   DEFAULT (current_timestamp AT TIME ZONE 'UTC'),
+  medical_history_id INT NOT NULL
+);
 
 
 

@@ -31,6 +31,11 @@ CREATE TABLE invoices(
   medical_history_id INT NOT NULL
 );
 
+CREATE TABLE patients(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  date_of_birth DATE NOT NULL
+);
 
 
 
